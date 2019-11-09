@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('/testing', function(){
     echo "This is testing";
 });
-Auth::routes();
+
+Auth::routes(['register' => false]); //hilangkan register link
 
 Route::get('/home', 'HomeController@index')->name('home');
